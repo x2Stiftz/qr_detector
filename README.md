@@ -69,11 +69,16 @@ except QRDetectorError as e:
 
 ## 🔄 **การแปลงรหัสผลลัพธ์**
 ```python
-results = detector.read_from_file('image.jpg')
-for result in results:
-    # แปลงรหัสด้วยการเข้ารหัสอื่น
-    decoded_text = result.decode(encoding='utf-8')
-    print(decoded_text)
+from qr_detector import QRDetector, QRDetectorError
+
+try:
+    detector = QRDetector(debug=True)
+    results = detector.read_from_file('image.jpg')
+    for result in results:
+        decoded_text = result.decode(encoding='utf-8')
+        print(f"รหัสที่แปลงแล้ว {decoded_text}")
+except QRDetectorError as e:
+    print(f"เกิดข้อผิดพลาด: {e}")
 ```
 
 📌 **หมายเหตุ:** สามารถเปลี่ยน `encoding='utf-8'` เป็น `shift_jis` หรือ `iso-8859-1` ได้ตามข้อมูล QR Code ที่ใช้! 🎯
