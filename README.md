@@ -1,4 +1,4 @@
-# 📌 **QR Detector - คู่มือการใช้งาน**
+# 📌 **QR Detector 1.2 - คู่มือการใช้งาน**
 
 ## 🚀 **ฟังก์ชันหลัก**
 
@@ -44,7 +44,10 @@ results = detector.decode(img)
 ```bash
 pip install qr-detector-th
 ```
-
+## ⌛ **การอัพเดต**
+```bash
+pip install --upgrade qr-detector-th
+```
 ---
 
 ## ⚙️ **พารามิเตอร์เพิ่มเติม**
